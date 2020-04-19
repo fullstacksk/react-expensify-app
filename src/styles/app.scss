@@ -1,0 +1,68 @@
+@import "~bootstrap/scss/bootstrap";
+
+.is-active {
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.SingleDatePicker_1,
+.SingleDatePickerInput_1,
+.SingleDatePicker>.DateInput_1 {
+    width: 100% !important;
+}
+
+.DateRangePickerInput>.DateInput {
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem !important;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.DateRangePickerInput input.DateInput_input {
+    padding: 0 !important;
+    font-size: 1rem !important;
+}
+
+.SingleDatePickerInput input.DateInput_input {
+    padding: 0.375rem 0.75rem !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+}
+
+.SingleDatePickerInput>input.DateInput_input {
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.DateRangePickerInput>input.DateInput_input {
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+* {
+    border-radius: 0px !important;
+}
