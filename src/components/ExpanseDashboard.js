@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Alert from 'react-bootstrap/ALert';
+import Alert from 'react-bootstrap/Alert';
 import ExpanseList from './ExpanseList';
 
 const ExpanseDashboard = () => (
