@@ -25,5 +25,5 @@
     eval $(ssh-agent -s) : will start sevices and provides p_id
     ssh-add ~/.ssh/id_rsa : add private key on your local machine 
     clip < ~/.ssh/id_rsa.pub : copy public key to clipboard and paste it on github
-    ssh -T git@github.com
+    ssh -T git@github.com : to check connection with github
 
