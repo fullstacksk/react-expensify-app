@@ -27,3 +27,8 @@
     clip < ~/.ssh/id_rsa.pub : copy public key to clipboard and paste it on github
     ssh -T git@github.com : to check connection with github
 
+    #heroku command
+    heroku create fullstacksk-expensify-app : creats app url on heroku and 
+                                            also creates heroku remote
+    git push heroku master : deploy the apps to that created url
+
