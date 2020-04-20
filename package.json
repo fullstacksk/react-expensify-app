@@ -1,7 +1,7 @@
 {
-  "name": "expensify",
+  "name": "React-Expensify-App",
   "version": "1.0.0",
-  "description": "consists all the basic packages",
+  "description": "can manage your all expanses!",
   "main": "index.js",
   "author": "s k sahil",
   "license": "MIT",
