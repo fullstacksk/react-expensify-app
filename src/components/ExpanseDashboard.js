@@ -1,9 +1,9 @@
 import React from 'react';
+import ExpanseList from './ExpanseList';
+import ExpanseListFilters from './ExpanseListFilters';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Alert from 'react-bootstrap/Alert';
-import ExpanseList from './ExpanseList';
-
 const ExpanseDashboard = () => (
     <div>
         <Container>
@@ -14,6 +14,9 @@ const ExpanseDashboard = () => (
                     </Row>
                 </Alert>
             </Container>
+        </Container>
+        <Container>
+            <ExpanseListFilters />
         </Container>
 
         <ExpanseList />

@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 
-export const MyNavbar = (props) => (
+const MyNavbar = (props) => (
     <Container className="border-bottom mb-3 " fluid>
         <Container >
             <Navbar expand="lg">

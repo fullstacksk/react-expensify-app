@@ -21,7 +21,9 @@
                      "targets": {
                          "node": "current"
                      }
-                 }, "@babel/react"]
+                 }],
+                 "@babel/react",
+                 "jest"
              ],
              "plugins": [
                  "@babel/plugin-proposal-object-rest-spread",

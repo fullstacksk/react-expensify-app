@@ -9,7 +9,7 @@ module.exports = (env) => {
         entry: "./src/app.js",
         output: {
             filename: "bundle.js",
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public', 'dist'),
             publicPath: "/"
         },
         module: {
@@ -23,11 +23,6 @@ module.exports = (env) => {
                     use: [
                         {
                             loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                publicPath: (resourcePath, context) => {
-                                    return path.relative(path.dirname(resourcePath), context) + '/';
-                                }
-                            }
                         }, {
                             loader: 'css-loader',
                             options: {
@@ -49,6 +44,7 @@ module.exports = (env) => {
         devtool: isProduction ? "source-map" : "inline-source-map",
         devServer: {
             contentBase: path.join(__dirname, 'public'),
+            publicPath: "/dist/",
             historyApiFallback: true
         }
     };

@@ -1,9 +1,7 @@
 {
-    "setupFiles": [
+    "setupFilesAfterEnv": [
         "raf/polyfill",
         "<rootDir>/src/test/setupTests.js"
     ],
-    "transform": {
-        "^.+\\.js$": "babel-jest"
-    }
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
 }

@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ExpanseList with expanses 1`] = `
+<Container
+  fluid={false}
+>
+  <Container
+    fluid={false}
+  >
+    <Alert
+      className="mb-1 py-2"
+      closeLabel="Close alert"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="warning"
+    >
+      <Row
+        className="justify-content-between px-2"
+        noGutters={false}
+      >
+        <div>
+          <h5>
+            Expanse
+            <Badge
+              className="ml-2"
+              pill={false}
+              variant="success"
+            >
+              3
+            </Badge>
+          </h5>
+        </div>
+        <div>
+          <h5>
+            Amount
+            <Badge
+              className="ml-2"
+              pill={false}
+              variant="warning"
+            >
+              6000
+            </Badge>
+          </h5>
+        </div>
+      </Row>
+    </Alert>
+  </Container>
+  <Container
+    fluid={false}
+  >
+    <NavLink
+      key="0"
+      to="/edit/123"
+    >
+      <Alert
+        className="mb-2 shadow-sm "
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="info"
+      >
+        <Row
+          className="justify-content-between px-2"
+          noGutters={false}
+        >
+          <div>
+            <h5
+              className="pb-0"
+            >
+              Gas bill
+            </h5>
+            <span
+              className="small mt-0"
+            >
+              1st Jan, 1970
+            </span>
+          </div>
+          <div>
+            <h5>
+              3000
+            </h5>
+          </div>
+        </Row>
+      </Alert>
+    </NavLink>
+    <NavLink
+      key="1"
+      to="/edit/1234"
+    >
+      <Alert
+        className="mb-2 shadow-sm "
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="info"
+      >
+        <Row
+          className="justify-content-between px-2"
+          noGutters={false}
+        >
+          <div>
+            <h5
+              className="pb-0"
+            >
+              Rent bill
+            </h5>
+            <span
+              className="small mt-0"
+            >
+              28th Dec, 1969
+            </span>
+          </div>
+          <div>
+            <h5>
+              1000
+            </h5>
+          </div>
+        </Row>
+      </Alert>
+    </NavLink>
+    <NavLink
+      key="2"
+      to="/edit/12345"
+    >
+      <Alert
+        className="mb-2 shadow-sm "
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="info"
+      >
+        <Row
+          className="justify-content-between px-2"
+          noGutters={false}
+        >
+          <div>
+            <h5
+              className="pb-0"
+            >
+              Water bill
+            </h5>
+            <span
+              className="small mt-0"
+            >
+              5th Jan, 1970
+            </span>
+          </div>
+          <div>
+            <h5>
+              2000
+            </h5>
+          </div>
+        </Row>
+      </Alert>
+    </NavLink>
+  </Container>
+</Container>
+`;
+
+exports[`Should render ExpanseList with no expanse 1`] = `
+<Container
+  fluid={false}
+>
+  <Container
+    fluid={false}
+  >
+    <Alert
+      className="mb-1 py-2"
+      closeLabel="Close alert"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="warning"
+    >
+      <Row
+        className="justify-content-between px-2"
+        noGutters={false}
+      >
+        <div>
+          <h5>
+            Expanse
+            <Badge
+              className="ml-2"
+              pill={false}
+              variant="success"
+            >
+              0
+            </Badge>
+          </h5>
+        </div>
+        <div>
+          <h5>
+            Amount
+            <Badge
+              className="ml-2"
+              pill={false}
+              variant="warning"
+            >
+              0
+            </Badge>
+          </h5>
+        </div>
+      </Row>
+    </Alert>
+  </Container>
+  <Container
+    fluid={false}
+  >
+    <Alert
+      className="mb-1 py-2"
+      closeLabel="Close alert"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="dark"
+    >
+      <Row
+        className="justify-content-center px-2"
+        noGutters={false}
+      >
+        <div>
+          <h6>
+            <Badge
+              className="ml-2"
+              pill={false}
+              variant="success"
+            >
+              No
+            </Badge>
+             Expanses
+          </h6>
+        </div>
+      </Row>
+    </Alert>
+  </Container>
+</Container>
+`;

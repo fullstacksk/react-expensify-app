@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render NotFound page 1`] = `
+<Container
+  fluid={false}
+>
+  <Jumbotron
+    className="py-5"
+    fluid={false}
+  >
+    <h1
+      className="text-center"
+    >
+      404
+    </h1>
+  </Jumbotron>
+</Container>
+`;

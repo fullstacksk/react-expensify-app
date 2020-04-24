@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should return MyNavbar component 1`] = `
+<Container
+  className="border-bottom mb-3 "
+  fluid={true}
+>
+  <Container
+    fluid={false}
+  >
+    <Navbar
+      collapseOnSelect={false}
+      expand="lg"
+      variant="light"
+    >
+      <NavLink
+        className="text-primary navbar-brand"
+        to="/"
+      >
+        <kbd
+          className="bg-info text-light"
+        >
+          Expensify
+        </kbd>
+      </NavLink>
+      <NavbarToggle
+        aria-controls="basic-navbar-nav"
+        label="Toggle navigation"
+      />
+      <NavbarCollapse
+        id="basic-navbar-nav"
+      >
+        <Nav
+          className="ml-auto "
+          fill={false}
+          justify={false}
+        >
+          <NavLink
+            activeClassName="is-active"
+            className="nav-link text-info"
+            exact={true}
+            to="/"
+          >
+            Dashboard
+          </NavLink>
+          <NavLink
+            activeClassName="is-active"
+            className="nav-link text-info"
+            to="/create"
+          >
+            Add Expanse
+          </NavLink>
+          <NavLink
+            activeClassName="is-active"
+            className="nav-link text-info"
+            to="/About"
+          >
+            About
+          </NavLink>
+          <NavLink
+            activeClassName="is-active"
+            className="nav-link text-info"
+            to="/support"
+          >
+            Support
+          </NavLink>
+        </Nav>
+      </NavbarCollapse>
+    </Navbar>
+  </Container>
+</Container>
+`;
