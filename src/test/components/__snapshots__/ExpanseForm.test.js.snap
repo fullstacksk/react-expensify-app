@@ -1,0 +1,868 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ExpanseForm correctly 1`] = `
+<Container
+  fluid={false}
+>
+  <Row
+    className="justify-content-md-center"
+    noGutters={false}
+  >
+    <Col
+      md={6}
+    >
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Description
+          </FormLabel>
+          <FormControl
+            id="description"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </FormGroup>
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Note
+          </FormLabel>
+          <FormControl
+            as="textarea"
+            id="note"
+            onChange={[Function]}
+            rows="2"
+            value=""
+          />
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Amount
+            </FormLabel>
+            <FormControl
+              id="amount"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </Col>
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Created At
+            </FormLabel>
+            <br />
+            <withStyles(SingleDatePicker)
+              anchorDirection="right"
+              appendToBody={false}
+              block={false}
+              calendarInfoPosition="bottom"
+              customCloseIcon={null}
+              customInputIcon={null}
+              date={"1970-01-01T00:00:00.000Z"}
+              dayPickerNavigationInlineStyles={null}
+              daySize={39}
+              disableScroll={false}
+              disabled={false}
+              displayFormat={[Function]}
+              enableOutsideDays={false}
+              firstDayOfWeek={null}
+              focused={false}
+              hideKeyboardShortcutsPanel={false}
+              horizontalMargin={0}
+              horizontalMonthPadding={13}
+              id="singleDatePicker"
+              initialVisibleMonth={null}
+              inputIconPosition="before"
+              isDayBlocked={[Function]}
+              isDayHighlighted={[Function]}
+              isOutsideRange={[Function]}
+              isRTL={false}
+              keepFocusOnInput={false}
+              keepOpenOnDateSelect={false}
+              monthFormat="MMMM YYYY"
+              navNext={null}
+              navPosition="navPositionTop"
+              navPrev={null}
+              noBorder={false}
+              numberOfMonths={1}
+              onClose={[Function]}
+              onDateChange={[Function]}
+              onFocusChange={[Function]}
+              onNextMonthClick={[Function]}
+              onPrevMonthClick={[Function]}
+              openDirection="down"
+              orientation="horizontal"
+              phrases={
+                Object {
+                  "calendarLabel": "Calendar",
+                  "chooseAvailableDate": [Function],
+                  "clearDate": "Clear Date",
+                  "closeDatePicker": "Close",
+                  "dateIsSelected": [Function],
+                  "dateIsUnavailable": [Function],
+                  "enterKey": "Enter key",
+                  "escape": "Escape key",
+                  "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+                  "homeEnd": "Home and end keys",
+                  "jumpToNextMonth": "Move forward to switch to the next month.",
+                  "jumpToPrevMonth": "Move backward to switch to the previous month.",
+                  "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardShortcuts": "Keyboard Shortcuts",
+                  "leftArrowRightArrow": "Right and left arrow keys",
+                  "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+                  "moveFocusByOneMonth": "Switch months.",
+                  "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+                  "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+                  "openThisPanel": "Open this panel.",
+                  "pageUpPageDown": "page up and page down keys",
+                  "questionMark": "Question mark",
+                  "returnFocusToInput": "Return to the date input field.",
+                  "roleDescription": "datepicker",
+                  "selectFocusedDate": "Select the date in focus.",
+                  "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+                  "upArrowDownArrow": "up and down arrow keys",
+                }
+              }
+              placeholder="Date"
+              readOnly={false}
+              regular={false}
+              renderCalendarInfo={null}
+              renderDayContents={null}
+              renderMonthElement={null}
+              renderMonthText={null}
+              renderNavNextButton={null}
+              renderNavPrevButton={null}
+              renderWeekHeaderElement={null}
+              reopenPickerOnClearDate={false}
+              required={false}
+              screenReaderInputMessage=""
+              showClearDate={false}
+              showDefaultInputIcon={false}
+              small={false}
+              verticalHeight={null}
+              verticalSpacing={22}
+              weekDayFormat="dd"
+              withFullScreenPortal={false}
+              withPortal={false}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col
+            className="mb-1"
+            sm={6}
+          >
+            <Button
+              active={false}
+              className="w-100"
+              disabled={false}
+              type="submit"
+              variant="info"
+            >
+              Add Expanse 
+            </Button>
+          </Col>
+        </FormGroup>
+      </Form>
+    </Col>
+  </Row>
+</Container>
+`;
+
+exports[`Should render ExpanseForm with error on invalid form submission 1`] = `
+<Container
+  fluid={false}
+>
+  <Row
+    className="justify-content-md-center"
+    noGutters={false}
+  >
+    <Col
+      md={6}
+    >
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Description
+          </FormLabel>
+          <FormControl
+            id="description"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </FormGroup>
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Note
+          </FormLabel>
+          <FormControl
+            as="textarea"
+            id="note"
+            onChange={[Function]}
+            rows="2"
+            value=""
+          />
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Amount
+            </FormLabel>
+            <FormControl
+              id="amount"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </Col>
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Created At
+            </FormLabel>
+            <br />
+            <withStyles(SingleDatePicker)
+              anchorDirection="right"
+              appendToBody={false}
+              block={false}
+              calendarInfoPosition="bottom"
+              customCloseIcon={null}
+              customInputIcon={null}
+              date={"1970-01-01T00:00:00.000Z"}
+              dayPickerNavigationInlineStyles={null}
+              daySize={39}
+              disableScroll={false}
+              disabled={false}
+              displayFormat={[Function]}
+              enableOutsideDays={false}
+              firstDayOfWeek={null}
+              focused={false}
+              hideKeyboardShortcutsPanel={false}
+              horizontalMargin={0}
+              horizontalMonthPadding={13}
+              id="singleDatePicker"
+              initialVisibleMonth={null}
+              inputIconPosition="before"
+              isDayBlocked={[Function]}
+              isDayHighlighted={[Function]}
+              isOutsideRange={[Function]}
+              isRTL={false}
+              keepFocusOnInput={false}
+              keepOpenOnDateSelect={false}
+              monthFormat="MMMM YYYY"
+              navNext={null}
+              navPosition="navPositionTop"
+              navPrev={null}
+              noBorder={false}
+              numberOfMonths={1}
+              onClose={[Function]}
+              onDateChange={[Function]}
+              onFocusChange={[Function]}
+              onNextMonthClick={[Function]}
+              onPrevMonthClick={[Function]}
+              openDirection="down"
+              orientation="horizontal"
+              phrases={
+                Object {
+                  "calendarLabel": "Calendar",
+                  "chooseAvailableDate": [Function],
+                  "clearDate": "Clear Date",
+                  "closeDatePicker": "Close",
+                  "dateIsSelected": [Function],
+                  "dateIsUnavailable": [Function],
+                  "enterKey": "Enter key",
+                  "escape": "Escape key",
+                  "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+                  "homeEnd": "Home and end keys",
+                  "jumpToNextMonth": "Move forward to switch to the next month.",
+                  "jumpToPrevMonth": "Move backward to switch to the previous month.",
+                  "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardShortcuts": "Keyboard Shortcuts",
+                  "leftArrowRightArrow": "Right and left arrow keys",
+                  "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+                  "moveFocusByOneMonth": "Switch months.",
+                  "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+                  "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+                  "openThisPanel": "Open this panel.",
+                  "pageUpPageDown": "page up and page down keys",
+                  "questionMark": "Question mark",
+                  "returnFocusToInput": "Return to the date input field.",
+                  "roleDescription": "datepicker",
+                  "selectFocusedDate": "Select the date in focus.",
+                  "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+                  "upArrowDownArrow": "up and down arrow keys",
+                }
+              }
+              placeholder="Date"
+              readOnly={false}
+              regular={false}
+              renderCalendarInfo={null}
+              renderDayContents={null}
+              renderMonthElement={null}
+              renderMonthText={null}
+              renderNavNextButton={null}
+              renderNavPrevButton={null}
+              renderWeekHeaderElement={null}
+              reopenPickerOnClearDate={false}
+              required={false}
+              screenReaderInputMessage=""
+              showClearDate={false}
+              showDefaultInputIcon={false}
+              small={false}
+              verticalHeight={null}
+              verticalSpacing={22}
+              weekDayFormat="dd"
+              withFullScreenPortal={false}
+              withPortal={false}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col
+            className="mb-1"
+            sm={6}
+          >
+            <Button
+              active={false}
+              className="w-100"
+              disabled={false}
+              type="submit"
+              variant="info"
+            >
+              Add Expanse 
+            </Button>
+          </Col>
+        </FormGroup>
+      </Form>
+    </Col>
+  </Row>
+</Container>
+`;
+
+exports[`Should render ExpanseForm with error on invalid form submission 2`] = `
+<Container
+  fluid={false}
+>
+  <Row
+    className="justify-content-md-center"
+    noGutters={false}
+  >
+    <Col
+      md={6}
+    >
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="warning"
+      >
+        Please provide description and amount!!
+      </Alert>
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Description
+          </FormLabel>
+          <FormControl
+            id="description"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </FormGroup>
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Note
+          </FormLabel>
+          <FormControl
+            as="textarea"
+            id="note"
+            onChange={[Function]}
+            rows="2"
+            value=""
+          />
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Amount
+            </FormLabel>
+            <FormControl
+              id="amount"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </Col>
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Created At
+            </FormLabel>
+            <br />
+            <withStyles(SingleDatePicker)
+              anchorDirection="right"
+              appendToBody={false}
+              block={false}
+              calendarInfoPosition="bottom"
+              customCloseIcon={null}
+              customInputIcon={null}
+              date={"1970-01-01T00:00:00.000Z"}
+              dayPickerNavigationInlineStyles={null}
+              daySize={39}
+              disableScroll={false}
+              disabled={false}
+              displayFormat={[Function]}
+              enableOutsideDays={false}
+              firstDayOfWeek={null}
+              focused={false}
+              hideKeyboardShortcutsPanel={false}
+              horizontalMargin={0}
+              horizontalMonthPadding={13}
+              id="singleDatePicker"
+              initialVisibleMonth={null}
+              inputIconPosition="before"
+              isDayBlocked={[Function]}
+              isDayHighlighted={[Function]}
+              isOutsideRange={[Function]}
+              isRTL={false}
+              keepFocusOnInput={false}
+              keepOpenOnDateSelect={false}
+              monthFormat="MMMM YYYY"
+              navNext={null}
+              navPosition="navPositionTop"
+              navPrev={null}
+              noBorder={false}
+              numberOfMonths={1}
+              onClose={[Function]}
+              onDateChange={[Function]}
+              onFocusChange={[Function]}
+              onNextMonthClick={[Function]}
+              onPrevMonthClick={[Function]}
+              openDirection="down"
+              orientation="horizontal"
+              phrases={
+                Object {
+                  "calendarLabel": "Calendar",
+                  "chooseAvailableDate": [Function],
+                  "clearDate": "Clear Date",
+                  "closeDatePicker": "Close",
+                  "dateIsSelected": [Function],
+                  "dateIsUnavailable": [Function],
+                  "enterKey": "Enter key",
+                  "escape": "Escape key",
+                  "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+                  "homeEnd": "Home and end keys",
+                  "jumpToNextMonth": "Move forward to switch to the next month.",
+                  "jumpToPrevMonth": "Move backward to switch to the previous month.",
+                  "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardShortcuts": "Keyboard Shortcuts",
+                  "leftArrowRightArrow": "Right and left arrow keys",
+                  "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+                  "moveFocusByOneMonth": "Switch months.",
+                  "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+                  "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+                  "openThisPanel": "Open this panel.",
+                  "pageUpPageDown": "page up and page down keys",
+                  "questionMark": "Question mark",
+                  "returnFocusToInput": "Return to the date input field.",
+                  "roleDescription": "datepicker",
+                  "selectFocusedDate": "Select the date in focus.",
+                  "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+                  "upArrowDownArrow": "up and down arrow keys",
+                }
+              }
+              placeholder="Date"
+              readOnly={false}
+              regular={false}
+              renderCalendarInfo={null}
+              renderDayContents={null}
+              renderMonthElement={null}
+              renderMonthText={null}
+              renderNavNextButton={null}
+              renderNavPrevButton={null}
+              renderWeekHeaderElement={null}
+              reopenPickerOnClearDate={false}
+              required={false}
+              screenReaderInputMessage=""
+              showClearDate={false}
+              showDefaultInputIcon={false}
+              small={false}
+              verticalHeight={null}
+              verticalSpacing={22}
+              weekDayFormat="dd"
+              withFullScreenPortal={false}
+              withPortal={false}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col
+            className="mb-1"
+            sm={6}
+          >
+            <Button
+              active={false}
+              className="w-100"
+              disabled={false}
+              type="submit"
+              variant="info"
+            >
+              Add Expanse 
+            </Button>
+          </Col>
+        </FormGroup>
+      </Form>
+    </Col>
+  </Row>
+</Container>
+`;
+
+exports[`Should render ExpanseForm with expanse data 1`] = `
+<Container
+  fluid={false}
+>
+  <Row
+    className="justify-content-md-center"
+    noGutters={false}
+  >
+    <Col
+      md={6}
+    >
+      <Form
+        inline={false}
+        onSubmit={[Function]}
+      >
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Description
+          </FormLabel>
+          <FormControl
+            id="description"
+            onChange={[Function]}
+            type="text"
+            value="Gas bill"
+          />
+        </FormGroup>
+        <FormGroup>
+          <FormLabel
+            column={false}
+            srOnly={false}
+          >
+            Note
+          </FormLabel>
+          <FormControl
+            as="textarea"
+            id="note"
+            onChange={[Function]}
+            rows="2"
+            value=""
+          />
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Amount
+            </FormLabel>
+            <FormControl
+              id="amount"
+              onChange={[Function]}
+              type="text"
+              value="3000"
+            />
+          </Col>
+          <Col>
+            <FormLabel
+              column={false}
+              srOnly={false}
+            >
+              Created At
+            </FormLabel>
+            <br />
+            <withStyles(SingleDatePicker)
+              anchorDirection="right"
+              appendToBody={false}
+              block={false}
+              calendarInfoPosition="bottom"
+              customCloseIcon={null}
+              customInputIcon={null}
+              date={"1970-01-01T00:00:00.000Z"}
+              dayPickerNavigationInlineStyles={null}
+              daySize={39}
+              disableScroll={false}
+              disabled={false}
+              displayFormat={[Function]}
+              enableOutsideDays={false}
+              firstDayOfWeek={null}
+              focused={false}
+              hideKeyboardShortcutsPanel={false}
+              horizontalMargin={0}
+              horizontalMonthPadding={13}
+              id="singleDatePicker"
+              initialVisibleMonth={null}
+              inputIconPosition="before"
+              isDayBlocked={[Function]}
+              isDayHighlighted={[Function]}
+              isOutsideRange={[Function]}
+              isRTL={false}
+              keepFocusOnInput={false}
+              keepOpenOnDateSelect={false}
+              monthFormat="MMMM YYYY"
+              navNext={null}
+              navPosition="navPositionTop"
+              navPrev={null}
+              noBorder={false}
+              numberOfMonths={1}
+              onClose={[Function]}
+              onDateChange={[Function]}
+              onFocusChange={[Function]}
+              onNextMonthClick={[Function]}
+              onPrevMonthClick={[Function]}
+              openDirection="down"
+              orientation="horizontal"
+              phrases={
+                Object {
+                  "calendarLabel": "Calendar",
+                  "chooseAvailableDate": [Function],
+                  "clearDate": "Clear Date",
+                  "closeDatePicker": "Close",
+                  "dateIsSelected": [Function],
+                  "dateIsUnavailable": [Function],
+                  "enterKey": "Enter key",
+                  "escape": "Escape key",
+                  "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+                  "homeEnd": "Home and end keys",
+                  "jumpToNextMonth": "Move forward to switch to the next month.",
+                  "jumpToPrevMonth": "Move backward to switch to the previous month.",
+                  "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+                  "keyboardShortcuts": "Keyboard Shortcuts",
+                  "leftArrowRightArrow": "Right and left arrow keys",
+                  "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+                  "moveFocusByOneMonth": "Switch months.",
+                  "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+                  "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+                  "openThisPanel": "Open this panel.",
+                  "pageUpPageDown": "page up and page down keys",
+                  "questionMark": "Question mark",
+                  "returnFocusToInput": "Return to the date input field.",
+                  "roleDescription": "datepicker",
+                  "selectFocusedDate": "Select the date in focus.",
+                  "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+                  "upArrowDownArrow": "up and down arrow keys",
+                }
+              }
+              placeholder="Date"
+              readOnly={false}
+              regular={false}
+              renderCalendarInfo={null}
+              renderDayContents={null}
+              renderMonthElement={null}
+              renderMonthText={null}
+              renderNavNextButton={null}
+              renderNavPrevButton={null}
+              renderWeekHeaderElement={null}
+              reopenPickerOnClearDate={false}
+              required={false}
+              screenReaderInputMessage=""
+              showClearDate={false}
+              showDefaultInputIcon={false}
+              small={false}
+              verticalHeight={null}
+              verticalSpacing={22}
+              weekDayFormat="dd"
+              withFullScreenPortal={false}
+              withPortal={false}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup
+          as={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "noGutters": false,
+              },
+              "displayName": "Row",
+              "render": [Function],
+            }
+          }
+        >
+          <Col
+            className="mb-1"
+            sm={6}
+          >
+            <Button
+              active={false}
+              className="w-100"
+              disabled={false}
+              type="submit"
+              variant="info"
+            >
+              Add Expanse 
+            </Button>
+          </Col>
+          <Col
+            sm={6}
+          >
+            <Button
+              active={false}
+              className="w-100"
+              disabled={false}
+              id="removeExpanse"
+              type="button"
+              variant="success"
+            >
+              Remove Expanse 
+            </Button>
+          </Col>
+        </FormGroup>
+      </Form>
+    </Col>
+  </Row>
+</Container>
+`;

@@ -8,7 +8,6 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import { SingleDatePicker } from 'react-dates';
 import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
 
 export default class ExpanseForm extends React.Component {
     constructor(props) {
@@ -71,19 +70,21 @@ export default class ExpanseForm extends React.Component {
                             </Alert>
                         }
                         <Form onSubmit={this.onSubmit} >
-                            <Form.Group controlId="exampleForm.ControlInput1">
+                            <Form.Group >
                                 <Form.Label>Description</Form.Label>
                                 <Form.Control
                                     type="text"
+                                    id="description"
                                     value={this.state.description}
                                     onChange={this.onDescriptionChange}
                                 />
                             </Form.Group>
-                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                            <Form.Group >
                                 <Form.Label>Note</Form.Label>
                                 <Form.Control
                                     as="textarea"
                                     rows="2"
+                                    id="note"
                                     value={this.state.note}
                                     onChange={this.onNoteChange}
                                 />
@@ -93,6 +94,7 @@ export default class ExpanseForm extends React.Component {
                                     <Form.Label>Amount</Form.Label>
                                     <Form.Control
                                         type="text"
+                                        id="amount"
                                         value={this.state.amount}
                                         onChange={this.onAmountChange}
                                     />
@@ -101,6 +103,7 @@ export default class ExpanseForm extends React.Component {
                                     <Form.Label>Created At</Form.Label>
                                     <br />
                                     <SingleDatePicker
+                                        id="singleDatePicker"
                                         date={this.state.createdAt}
                                         onDateChange={this.onDateChange}
                                         focused={this.state.calenderFocused}
@@ -118,6 +121,7 @@ export default class ExpanseForm extends React.Component {
                                 {this.props.expanse &&
                                     <Col sm={6}>
                                         <Button
+                                            id="removeExpanse"
                                             variant="success"
                                             className="w-100"
                                             onClick={this.props.removeExpanse}

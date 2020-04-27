@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render EditExpanse page correctly 1`] = `
+<Container
+  fluid={false}
+>
+  <Container
+    className="pt-3 pb-1"
+    fluid={false}
+  >
+    <Alert
+      closeLabel="Close alert"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="info"
+    >
+      <Row
+        className="px-2"
+        noGutters={false}
+      >
+        <p
+          className="text-success mb-0"
+        >
+          There is a request to edit the expanse having id : 
+          <kbd
+            className="bg-info"
+          >
+            12345
+          </kbd>
+        </p>
+      </Row>
+    </Alert>
+  </Container>
+  <ExpanseForm
+    expanse={
+      Object {
+        "amount": 2000,
+        "createdAt": 345600000,
+        "description": "Water bill",
+        "id": "12345",
+        "note": "",
+      }
+    }
+    onSubmit={[Function]}
+    removeExpanse={[Function]}
+  />
+</Container>
+`;

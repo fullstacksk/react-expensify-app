@@ -8,8 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Alert from 'react-bootstrap/Alert';
 import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
-class ExpanseListFilters extends React.Component {
+export class ExpanseListFilters extends React.Component {
     state = {
         calenderFocused: null
     }

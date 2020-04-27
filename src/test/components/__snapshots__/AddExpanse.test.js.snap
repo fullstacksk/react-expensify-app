@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SHould handle onSubmit 1`] = `
+<Container
+  fluid={false}
+>
+  <Container
+    fluid={false}
+  >
+    <Alert
+      closeLabel="Close alert"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="info"
+    >
+      <Row
+        className="text-success px-2"
+        noGutters={false}
+      >
+        <h5>
+          You can add your expanse!
+        </h5>
+      </Row>
+    </Alert>
+  </Container>
+  <ExpanseForm
+    onSubmit={[Function]}
+  />
+</Container>
+`;
+
+exports[`SHould render AddExpanse Correctly 1`] = `
+<Container
+  fluid={false}
+>
+  <Container
+    fluid={false}
+  >
+    <Alert
+      closeLabel="Close alert"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="info"
+    >
+      <Row
+        className="text-success px-2"
+        noGutters={false}
+      >
+        <h5>
+          You can add your expanse!
+        </h5>
+      </Row>
+    </Alert>
+  </Container>
+  <ExpanseForm
+    onSubmit={[Function]}
+  />
+</Container>
+`;

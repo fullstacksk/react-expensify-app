@@ -6,6 +6,7 @@ import configureStore from './store/configureStore';
 import { addExpanse } from './actions/expanses';
 import moment from 'moment';
 import "./styles/app.scss";
+import 'react-dates/lib/css/_datepicker.css';
 
 
 const store = configureStore();

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ExpanseDashboard 1`] = `
+<div>
+  <Container
+    fluid={false}
+  >
+    <Container
+      fluid={false}
+    >
+      <Alert
+        closeLabel="Close alert"
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+        variant="danger"
+      >
+        <Row
+          className="px-2"
+          noGutters={false}
+        >
+          <h5>
+            Expanse Dashboard
+          </h5>
+        </Row>
+      </Alert>
+    </Container>
+  </Container>
+  <Container
+    fluid={false}
+  >
+    <Connect(ExpanseListFilters) />
+  </Container>
+  <Connect(ExpanseList) />
+</div>
+`;
