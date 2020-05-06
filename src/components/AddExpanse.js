@@ -1,6 +1,6 @@
 import React from 'react';
 import ExpanseForm from './ExpanseForm';
-import { addExpanse } from '../actions/expanses';
+import { startAddExpanse } from '../actions/expanses';
 import { connect } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,7 +9,7 @@ import Alert from 'react-bootstrap/Alert';
 export class AddExpanse extends React.Component {
 
     onSubmit = (expanse) => {
-        this.props.addExpanse(expanse);
+        this.props.startAddExpanse(expanse);
         this.props.history.push("/");
     };
     render() {
@@ -31,7 +31,7 @@ export class AddExpanse extends React.Component {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    addExpanse: (expanse) => dispatch(addExpanse(expanse))
+    startAddExpanse: (expanse) => dispatch(startAddExpanse(expanse))
 })
 
 export default connect(undefined, mapDispatchToProps)(AddExpanse);

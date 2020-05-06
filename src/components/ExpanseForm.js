@@ -99,11 +99,10 @@ export default class ExpanseForm extends React.Component {
                                         onChange={this.onAmountChange}
                                     />
                                 </Col>
-                                <Col>
+                                <Col id="singleDatePicker">
                                     <Form.Label>Created At</Form.Label>
                                     <br />
                                     <SingleDatePicker
-                                        id="singleDatePicker"
                                         date={this.state.createdAt}
                                         onDateChange={this.onDateChange}
                                         focused={this.state.calenderFocused}

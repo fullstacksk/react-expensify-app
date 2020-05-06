@@ -14,13 +14,24 @@ export class ExpanseListFilters extends React.Component {
     }
 
     onDatesChange = ({ startDate, endDate }) => {
-        this.props.dispatch(setStartDate(startDate));
-        this.props.dispatch((setEndDate(endDate)));
+        this.props.setStartDate(startDate);
+        this.props.setEndDate(endDate);
     }
     onFocusChange = (calenderFocused) => {
-        console.log(calenderFocused);
         this.setState(() => ({ calenderFocused }));
     }
+
+    onSortChange = (e) => {
+        if (e.target.value === 'date')
+            this.props.sortByDate();
+        else if (e.target.value === 'amount')
+            this.props.sortByAmount();
+    }
+
+    onTextChange = (e) => {
+        this.props.setFilterText(e.target.value)
+    }
+
     render() {
         return (
             <Container className="mb-0">
@@ -28,32 +39,27 @@ export class ExpanseListFilters extends React.Component {
                     <Row className="justify-content-between px-2 ">
                         <div className="w-50">
                             <FormControl
+                                id="filterText"
                                 type="text"
                                 placeholder="Search"
                                 className=" float-right"
                                 value={this.props.filters.text}
-                                onChange={(e) => {
-                                    this.props.dispatch(setFilterText(e.target.value))
-                                }}
+                                onChange={this.onTextChange}
                             />
                         </div>
                         <div>
                             <Form.Control
+                                id="sortBy"
                                 as="select"
                                 value={this.props.filters.sortBy}
-                                onChange={(e) => {
-                                    if (e.target.value === 'date')
-                                        this.props.dispatch(sortByDate());
-                                    else if (e.target.value === 'amount')
-                                        this.props.dispatch(sortByAmount());
-                                }}
+                                onChange={this.onSortChange}
                             >
                                 <option>Sort</option>
                                 <option value="amount">Amount</option>
                                 <option value="date">Date</option>
                             </Form.Control>
                         </div>
-                        <div className="">
+                        <div id='dateRangePicker'>
                             <DateRangePicker
                                 startDate={this.props.filters.startDate}
                                 startDateId="expanse_start_date"
@@ -73,9 +79,14 @@ export class ExpanseListFilters extends React.Component {
         );
     }
 }
-const mapStatetoProps = (state) => {
-    return {
-        filters: state.filters
-    }
-}
-export default connect(mapStatetoProps)(ExpanseListFilters);
+const mapStatetoProps = (state) => ({
+    filters: state.filters
+})
+const mapDispatchToProps = (dispatch) => ({
+    setFilterText: (text) => dispatch(setFilterText(text)),
+    sortByDate: () => dispatch(sortByDate()),
+    sortByAmount: () => dispatch(sortByAmount()),
+    setStartDate: (startDate) => dispatch(setStartDate(startDate)),
+    setEndDate: (endDate) => dispatch(setEndDate(endDate))
+})
+export default connect(mapStatetoProps, mapDispatchToProps)(ExpanseListFilters);

@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { addExpanse } from './actions/expanses';
 import moment from 'moment';
+import "./firebase/firebase";
 import "./styles/app.scss";
 import 'react-dates/lib/css/_datepicker.css';
-
 
 const store = configureStore();
 
@@ -19,7 +19,6 @@ const expanseOne = store.dispatch(addExpanse(
         createdAt: moment()
     }
 ));
-// console.log("expanseOne : ", expanseOne);
 
 const expanseTwo = store.dispatch(addExpanse(
     {
@@ -29,7 +28,6 @@ const expanseTwo = store.dispatch(addExpanse(
         createdAt: moment()
     }
 ));
-// console.log("expanseTwo : ", expanseTwo);
 
 const expanseThree = store.dispatch(addExpanse(
     {
@@ -39,16 +37,7 @@ const expanseThree = store.dispatch(addExpanse(
         createdAt: moment()
     }
 ));
-// console.log("expanseThree : ", expanseThree);
 
-// setTimeout(() => {
-//     store.dispatch(setFilterText('water'));
-// }, 3000)
-// const settedFilterTextTwo = store.dispatch(setFilterText('water'));
-// console.log("settedFilterTextTwo : ", settedFilterTextTwo);
-// const state = store.getState();
-// const visibleExpanses = getVisibleExpanses(state.expanses, state.filters);
-// console.log(visibleExpanses);
 const jsx = (
     <div>
         <Provider store={store}>

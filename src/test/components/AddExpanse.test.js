@@ -3,11 +3,11 @@ import { shallow } from 'enzyme'
 import { AddExpanse } from '../../components/AddExpanse'
 import expanses from '../fixtures/expanses'
 
-let addExpanse, history, wrapper;
+let startAddExpanse, history, wrapper;
 beforeEach(() => {
-    addExpanse = jest.fn()
+    startAddExpanse = jest.fn()
     history = { push: jest.fn() }
-    wrapper = shallow(<AddExpanse addExpanse={addExpanse} history={history} />)
+    wrapper = shallow(<AddExpanse startAddExpanse={startAddExpanse} history={history} />)
 })
 
 test("SHould render AddExpanse Correctly", () => {
@@ -17,6 +17,6 @@ test("SHould render AddExpanse Correctly", () => {
 test("SHould handle onSubmit", () => {
     wrapper.find('ExpanseForm').prop('onSubmit')(expanses[1])
     expect(history.push).toHaveBeenLastCalledWith("/")
-    expect(addExpanse).toHaveBeenLastCalledWith(expanses[1])
+    expect(startAddExpanse).toHaveBeenLastCalledWith(expanses[1])
     expect(wrapper).toMatchSnapshot()
 })

@@ -1,4 +1,12 @@
-import { addExpanse, editExpanse, removeExpanse } from '../../actions/expanses'
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
+import { addExpanse, editExpanse, removeExpanse, startAddExpanse } from '../../actions/expanses'
+import expanses from '../fixtures/expanses'
+
+const createMockStore = configureMockStore([thunk])
+beforeEach(() => {
+    jest.setTimeout(10000)
+})
 
 //testing removeExpanse
 test('Should generate removeExpanse action object', () => {
@@ -23,33 +31,52 @@ test('Should generate editExpanse action object', () => {
 //testing addExpanse
 
 test("Should generate addExpanse action", () => {
-    let expanse = {
+
+    expect(addExpanse(expanses[2])).toEqual({
+        type: "ADD_EXPANSE",
+        expanse: expanses[2]
+
+    })
+})
+
+test("should add expanse to database and to store", (done) => {
+    const store = createMockStore({})
+    const expanseData = {
         description: "Internet Bill",
-        note: "Internet Bill Paid",
-        amount: 500,
-        createdAt: 12457822000
+        note: "i  have paid",
+        amount: 123,
+        createdAt: 1234562
     }
-    expect(addExpanse(expanse)).toEqual({
-        type: "ADD_EXPANSE",
-        expanse: {
-            ...expanse,
-            id: expect.any(String)
-        }
-
+    store.dispatch(startAddExpanse(expanseData)).then(() => {
+        const actions = store.getActions()
+        expect(actions[0]).toEqual({
+            type: "ADD_EXPANSE",
+            expanse: {
+                id: expect.any(String),
+                ...expanseData
+            }
+        })
+        done()
     })
 })
 
-//testing addExpanse with no data
-
-test("should generate addExpanse action object default", () => {
-    expect(addExpanse()).toEqual({
-        type: "ADD_EXPANSE",
-        expanse: {
-            id: expect.any(String),
-            createdAt: 0,
-            amount: 0,
-            description: '',
-            note: ''
-        }
-    })
+test("should add expanse with defaults to database and to store", (done) => {
+    const store = createMockStore({})
+    store.dispatch(startAddExpanse())
+        .then(() => {
+            const actions = store.getActions()
+            expect(actions[0]).toEqual({
+                type: "ADD_EXPANSE",
+                expanse: {
+                    id: expect.any(String),
+                    description: '',
+                    note: '',
+                    amount: 0,
+                    createdAt: 0
+                }
+            })
+            done()
+        })
 })
+
+
