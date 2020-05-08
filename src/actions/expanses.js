@@ -43,3 +43,30 @@ export const editExpanse = (id, updates) => ({
     id,
     updates
 });
+
+//SET_EXPANSES
+export const setExpanses = (expanses) => ({
+    type: "SET_EXPANSES",
+    expanses
+})
+
+export const startSetExpanses = () => {
+    return (dispatch) => {
+        return database.ref('expanses')
+            .once('value')
+            .then((snapshot) => {
+                const expanses = []
+                snapshot.forEach((childSnapshot) => {
+                    const expanse = {
+                        id: childSnapshot.key,
+                        ...childSnapshot.val()
+                    }
+                    expanses.push(expanse)
+                })
+                dispatch(setExpanses(expanses))
+            })
+            .catch((e) => {
+                console.log("Setting up of expanses got failed", e)
+            })
+    }
+}

@@ -1,5 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 
+.h-min-100 {
+    min-height: 100vh;
+}
+
+.h-max-100 {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
 .is-active {
     font-weight: bold;
 }

@@ -58,3 +58,14 @@ test("Should not edit the expanse if id not found", () => {
         updates: { amount: 999.99 }
     })).toEqual([...expanses])
 })
+
+//testing SET_EXPANSES with data
+
+test("Should set Expanses", () => {
+    const action = {
+        type: "SET_EXPANSES",
+        expanses: [expanses[1]]
+    }
+    const state = expansesReducer(expanses, action)
+    expect(state).toEqual([expanses[1]])
+})

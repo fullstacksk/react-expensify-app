@@ -4,6 +4,8 @@ const expansesReducerDefaultState = [];
 
 export default ((state = expansesReducerDefaultState, action) => {
     switch (action.type) {
+        case "SET_EXPANSES":
+            return action.expanses
         case 'ADD_EXPANSE':
             return [
                 ...state,

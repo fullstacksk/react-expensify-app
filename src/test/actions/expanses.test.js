@@ -1,10 +1,16 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { addExpanse, editExpanse, removeExpanse, startAddExpanse } from '../../actions/expanses'
+import { addExpanse, editExpanse, removeExpanse, startAddExpanse, setExpanses, startSetExpanses } from '../../actions/expanses'
 import expanses from '../fixtures/expanses'
+import database from '../../firebase/firebase'
 
 const createMockStore = configureMockStore([thunk])
-beforeEach(() => {
+beforeEach((done) => {
+    const expanseData = {}
+    expanses.forEach(({ id, description, note, amount, createdAt }) => {
+        expanseData[id] = { description, note, amount, createdAt }
+    })
+    database.ref('expanses').set(expanseData).then(() => done())
     jest.setTimeout(10000)
 })
 
@@ -79,4 +85,22 @@ test("should add expanse with defaults to database and to store", (done) => {
         })
 })
 
+test("Should setExpanses correctly with data", () => {
+    const action = setExpanses(expanses)
+    expect(action).toEqual({
+        type: "SET_EXPANSES",
+        expanses
+    })
+})
 
+test("should fetch data from firebase", (done) => {
+    const store = createMockStore({})
+    store.dispatch(startSetExpanses()).then(() => {
+        const actions = store.getActions()
+        expect(actions[0]).toEqual({
+            type: "SET_EXPANSES",
+            expanses
+        })
+        done()
+    })
+})
