@@ -35,14 +35,41 @@ export const startAddExpanse = (expanseData = {}) => {
 export const removeExpanse = ({ id = '' } = {}) => ({
     type: 'REMOVE_EXPANSE',
     id
-
 });
+
+//START_REMOVE_EXPANSE
+export const startRemoveExpanse = ({ id } = {}) => {
+    return (dispatch) => {
+        return database.ref(`expanses/${id}`).remove()
+            .then(() => {
+                dispatch(removeExpanse({ id }))
+            })
+            .catch((e) => {
+                console.log("Expanse deletion failed!")
+            })
+    }
+}
 // EDIT_EXPANSE
 export const editExpanse = (id, updates) => ({
     type: 'EDIT_EXPANSE',
     id,
     updates
 });
+
+//START_EDIT_EXPANSE
+
+export const startEditExpanse = (id, updates) => {
+    return (dispatch) => {
+        return database.ref(`expanses/${id}`)
+            .set(updates)
+            .then(() => {
+                dispatch(editExpanse(id, updates))
+            })
+            .catch((e) => {
+                console.log("Expanse editing failed!")
+            })
+    }
+}
 
 //SET_EXPANSES
 export const setExpanses = (expanses) => ({

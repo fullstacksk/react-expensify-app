@@ -55,7 +55,7 @@ exports[`Should render EditExpanse page correctly 1`] = `
       }
     }
     onSubmit={[Function]}
-    removeExpanse={[Function]}
+    startRemoveExpanse={[Function]}
   />
 </Container>
 `;

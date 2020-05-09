@@ -1,6 +1,15 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { addExpanse, editExpanse, removeExpanse, startAddExpanse, setExpanses, startSetExpanses } from '../../actions/expanses'
+import {
+    addExpanse,
+    startAddExpanse,
+    editExpanse,
+    startEditExpanse,
+    removeExpanse,
+    startRemoveExpanse,
+    setExpanses,
+    startSetExpanses
+} from '../../actions/expanses'
 import expanses from '../fixtures/expanses'
 import database from '../../firebase/firebase'
 
@@ -12,6 +21,14 @@ beforeEach((done) => {
     })
     database.ref('expanses').set(expanseData).then(() => done())
     jest.setTimeout(10000)
+})
+
+test("Should generate setExpanses action correctly", () => {
+    const action = setExpanses(expanses)
+    expect(action).toEqual({
+        type: "SET_EXPANSES",
+        expanses
+    })
 })
 
 //testing removeExpanse
@@ -42,6 +59,18 @@ test("Should generate addExpanse action", () => {
         type: "ADD_EXPANSE",
         expanse: expanses[2]
 
+    })
+})
+
+test("should fetch data from firebase", (done) => {
+    const store = createMockStore({})
+    store.dispatch(startSetExpanses()).then(() => {
+        const actions = store.getActions()
+        expect(actions[0]).toEqual({
+            type: "SET_EXPANSES",
+            expanses
+        })
+        done()
     })
 })
 
@@ -84,23 +113,34 @@ test("should add expanse with defaults to database and to store", (done) => {
             done()
         })
 })
-
-test("Should setExpanses correctly with data", () => {
-    const action = setExpanses(expanses)
-    expect(action).toEqual({
-        type: "SET_EXPANSES",
-        expanses
-    })
-})
-
-test("should fetch data from firebase", (done) => {
+test("should delete data from firebase", (done) => {
     const store = createMockStore({})
-    store.dispatch(startSetExpanses()).then(() => {
+    const id = expanses[0].id
+    store.dispatch(startRemoveExpanse({ id })).then(() => {
         const actions = store.getActions()
         expect(actions[0]).toEqual({
-            type: "SET_EXPANSES",
-            expanses
+            type: "REMOVE_EXPANSE",
+            id
         })
         done()
     })
 })
+
+test("Should edit data from firebase", () => {
+    const store = createMockStore({})
+    const id = expanses[1].id
+    const updates = {
+        description: "Most Expensive",
+        note: "i have bought siyarams suits last year"
+    }
+    store.dispatch(startEditExpanse(id, updates))
+        .then(() => {
+            const actions = store.getActions()
+            expect(actions[0]).toEqual({
+                type: "EDIT_EXPANSE",
+                id,
+                updates
+            })
+        })
+})
+

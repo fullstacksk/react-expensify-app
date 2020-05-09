@@ -3,16 +3,16 @@ import { shallow } from 'enzyme'
 import { EditExpanse } from '../../components/EditExpanse'
 import expanses from '../fixtures/expanses'
 
-let editExpanse, removeExpanse, history, wrapper;
+let startEditExpanse, startRemoveExpanse, history, wrapper;
 
 beforeEach(() => {
-    editExpanse = jest.fn()
-    removeExpanse = jest.fn()
+    startEditExpanse = jest.fn()
+    startRemoveExpanse = jest.fn()
     history = { push: jest.fn() }
     wrapper = shallow(<EditExpanse
         expanse={expanses[2]}
-        editExpanse={editExpanse}
-        removeExpanse={removeExpanse}
+        startEditExpanse={startEditExpanse}
+        startRemoveExpanse={startRemoveExpanse}
         history={history}
     />)
 })
@@ -20,13 +20,13 @@ beforeEach(() => {
 test("Should render EditExpanse page correctly", () => {
     expect(wrapper).toMatchSnapshot()
 })
-test("Should handle editExpanse", () => {
+test("Should handle startEditExpanse", () => {
     wrapper.find('ExpanseForm').prop('onSubmit')(expanses[2])
     expect(history.push).toHaveBeenLastCalledWith("/")
-    expect(editExpanse).toHaveBeenLastCalledWith(expanses[2].id, expanses[2])
+    expect(startEditExpanse).toHaveBeenLastCalledWith(expanses[2].id, expanses[2])
 })
-test("Should handle removeExpanse", () => {
-    wrapper.find('ExpanseForm').prop('removeExpanse')()
+test("Should handle startRemoveExpanse", () => {
+    wrapper.find('ExpanseForm').prop('startRemoveExpanse')()
     expect(history.push).toHaveBeenLastCalledWith("/")
-    expect(removeExpanse).toHaveBeenLastCalledWith(expanses[2].id)
+    expect(startRemoveExpanse).toHaveBeenLastCalledWith(expanses[2].id)
 })

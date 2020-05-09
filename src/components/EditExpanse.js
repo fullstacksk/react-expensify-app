@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { editExpanse, removeExpanse } from '../actions/expanses';
+import { startEditExpanse, startRemoveExpanse } from '../actions/expanses';
 import ExpanseForm from './ExpanseForm';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,11 +9,11 @@ import Alert from 'react-bootstrap/Alert';
 export class EditExpanse extends React.Component {
 
     onSubmit = (expanse) => {
-        this.props.editExpanse(this.props.expanse.id, expanse);
+        this.props.startEditExpanse(this.props.expanse.id, expanse);
         this.props.history.push('/');
     };
-    removeExpanse = () => {
-        this.props.removeExpanse(this.props.expanse.id);
+    startRemoveExpanse = () => {
+        this.props.startRemoveExpanse(this.props.expanse.id);
         this.props.history.push('/');
     }
     render() {
@@ -30,7 +30,7 @@ export class EditExpanse extends React.Component {
 
                     onSubmit={this.onSubmit}
                     expanse={this.props.expanse}
-                    removeExpanse={this.removeExpanse}
+                    startRemoveExpanse={this.startRemoveExpanse}
                 />
             </Container>
         );
@@ -44,7 +44,7 @@ const mapStateToProps = (state, props) => {
 }
 
 const mapDispatchToProps = (dispatch, props) => ({
-    editExpanse: (id, expanse) => dispatch(editExpanse(id, expanse)),
-    removeExpanse: (id) => dispatch(removeExpanse({ id }))
+    startEditExpanse: (id, expanse) => dispatch(startEditExpanse(id, expanse)),
+    startRemoveExpanse: (id) => dispatch(startRemoveExpanse({ id }))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(EditExpanse);

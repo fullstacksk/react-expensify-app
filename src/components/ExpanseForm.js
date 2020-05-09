@@ -123,7 +123,7 @@ export default class ExpanseForm extends React.Component {
                                             id="removeExpanse"
                                             variant="success"
                                             className="w-100"
-                                            onClick={this.props.removeExpanse}
+                                            onClick={this.props.startRemoveExpanse}
                                         >Remove Expanse </Button>
                                     </Col>}
                             </Form.Group>
