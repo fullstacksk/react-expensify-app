@@ -10,7 +10,7 @@ export class AddExpanse extends React.Component {
 
     onSubmit = (expanse) => {
         this.props.startAddExpanse(expanse);
-        this.props.history.push("/");
+        this.props.history.push("/dashboard");
     };
     render() {
         return (

@@ -16,7 +16,7 @@ test("SHould render AddExpanse Correctly", () => {
 
 test("SHould handle onSubmit", () => {
     wrapper.find('ExpanseForm').prop('onSubmit')(expanses[1])
-    expect(history.push).toHaveBeenLastCalledWith("/")
+    expect(history.push).toHaveBeenLastCalledWith("/dashboard")
     expect(startAddExpanse).toHaveBeenLastCalledWith(expanses[1])
     expect(wrapper).toMatchSnapshot()
 })

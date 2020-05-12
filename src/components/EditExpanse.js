@@ -10,11 +10,11 @@ export class EditExpanse extends React.Component {
 
     onSubmit = (expanse) => {
         this.props.startEditExpanse(this.props.expanse.id, expanse);
-        this.props.history.push('/');
+        this.props.history.push('/dashboard');
     };
     startRemoveExpanse = () => {
         this.props.startRemoveExpanse(this.props.expanse.id);
-        this.props.history.push('/');
+        this.props.history.push('/dashboard');
     }
     render() {
         return (

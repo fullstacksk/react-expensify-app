@@ -1,16 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter';
+import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { addExpanse, startSetExpanses } from './actions/expanses';
-import moment from 'moment';
-import "./firebase/firebase";
+import { startSetExpanses } from './actions/expanses';
+import { firebase } from "./firebase/firebase";
+import { login, logout } from './actions/auth';
 import "./styles/app.scss";
 import "./styles/loader.css";
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
+let hasRendered = false;
+const renderApp = () => {
+    if (!hasRendered) {
+        ReactDOM.render(jsx, document.getElementById('app'));
+        hasRendered = true;
+    }
+}
 
 const jsx = (
     <div>
@@ -21,7 +28,7 @@ const jsx = (
 )
 
 const loader = (
-    <div className="container-fluid h-min-100 h-max-100 border">
+    <div className="container-fluid h-min-100 h-max-100">
         <div className="row justify-content-center align-items-center h-min-100 h-max-100">
             <div className="lds-ripple"><div></div><div></div></div>
         </div>
@@ -29,6 +36,21 @@ const loader = (
 )
 
 ReactDOM.render(loader, document.getElementById('app'));
-store.dispatch(startSetExpanses()).then(() => {
-    ReactDOM.render(jsx, document.getElementById('app'));
+
+
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        store.dispatch(login(user.uid));
+        store.dispatch(startSetExpanses()).then(() => {
+            renderApp();
+            if (history.location.pathname === '/') {
+                history.push("/dashboard");
+            }
+        })
+    } else {
+        store.dispatch(logout())
+        renderApp();
+        history.push("/");
+    }
 })
+

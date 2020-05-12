@@ -39,7 +39,7 @@ exports[`Should return MyNavbar component 1`] = `
             activeClassName="is-active"
             className="nav-link text-info"
             exact={true}
-            to="/"
+            to="/dashboard"
           >
             Dashboard
           </NavLink>
@@ -63,6 +63,22 @@ exports[`Should return MyNavbar component 1`] = `
             to="/support"
           >
             Support
+          </NavLink>
+          <NavLink
+            activeClassName="is-active"
+            className="nav-link text-info"
+            to="/support"
+          >
+            <Button
+              active={false}
+              className="py-0"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="danger"
+            >
+              Logout
+            </Button>
           </NavLink>
         </Nav>
       </NavbarCollapse>

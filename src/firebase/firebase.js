@@ -12,7 +12,9 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-export { firebase, database as default }
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+export { firebase, googleAuthProvider, database as default }
 
 // const onValueChange = database.ref('expanses')
 //     .on('value', (snapshot) => {

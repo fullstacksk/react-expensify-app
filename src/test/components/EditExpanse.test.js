@@ -22,11 +22,11 @@ test("Should render EditExpanse page correctly", () => {
 })
 test("Should handle startEditExpanse", () => {
     wrapper.find('ExpanseForm').prop('onSubmit')(expanses[2])
-    expect(history.push).toHaveBeenLastCalledWith("/")
+    expect(history.push).toHaveBeenLastCalledWith("/dashboard")
     expect(startEditExpanse).toHaveBeenLastCalledWith(expanses[2].id, expanses[2])
 })
 test("Should handle startRemoveExpanse", () => {
     wrapper.find('ExpanseForm').prop('startRemoveExpanse')()
-    expect(history.push).toHaveBeenLastCalledWith("/")
+    expect(history.push).toHaveBeenLastCalledWith("/dashboard")
     expect(startRemoveExpanse).toHaveBeenLastCalledWith(expanses[2].id)
 })

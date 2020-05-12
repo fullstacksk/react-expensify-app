@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Login correctly 1`] = `
+<Container
+  className="h-min-100 h-max-100 bg-light"
+  fluid={true}
+>
+  <Row
+    className="justify-content-center align-items-center h-min-100 h-max-100"
+    md={4}
+    noGutters={false}
+  >
+    <Form
+      inline={false}
+    >
+      <Button
+        active={false}
+        className="w-100"
+        disabled={false}
+        id="loginWithGoogle"
+        onClick={[Function]}
+        type="button"
+        variant="success"
+      >
+         Login With Google
+      </Button>
+      <p
+        className="text-center my-2 p-1"
+      >
+        <Badge
+          pill={false}
+          variant="info"
+        >
+          Or
+        </Badge>
+      </p>
+      <Button
+        active={false}
+        className="w-100"
+        disabled={false}
+        id="loginWithFacebook"
+        type="button"
+        variant="primary"
+      >
+         Login With Facebook
+      </Button>
+      <p
+        className="text-center my-2 p-1"
+      >
+        <Badge
+          pill={false}
+          variant="info"
+        >
+          Or
+        </Badge>
+      </p>
+      <ForwardRef>
+        <Card
+          body={false}
+        >
+          <ForwardRef
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "CardHeader",
+                "render": [Function],
+              }
+            }
+            className="p-0"
+            eventKey="0"
+          >
+            <Button
+              active={false}
+              className="w-100"
+              disabled={false}
+              type="button"
+              variant="info"
+            >
+               Login Anonymously
+            </Button>
+          </ForwardRef>
+          <AccordionCollapse
+            eventKey="0"
+          >
+            <CardBody>
+              <FormGroup
+                controlId="formBasicEmail"
+              >
+                <FormLabel
+                  column={false}
+                  srOnly={false}
+                >
+                  Email address
+                </FormLabel>
+                <FormControl
+                  placeholder="Enter email"
+                  type="email"
+                />
+                <FormText
+                  className="text-muted"
+                >
+                  We'll never share your email with anyone else.
+                </FormText>
+              </FormGroup>
+              <FormGroup
+                controlId="formBasicPassword"
+              >
+                <FormLabel
+                  column={false}
+                  srOnly={false}
+                >
+                  Password
+                </FormLabel>
+                <FormControl
+                  placeholder="Password"
+                  type="password"
+                />
+              </FormGroup>
+              <Button
+                active={false}
+                className="w-100"
+                disabled={false}
+                type="submit"
+                variant="info"
+              >
+                 Submit
+              </Button>
+            </CardBody>
+          </AccordionCollapse>
+        </Card>
+      </ForwardRef>
+    </Form>
+  </Row>
+</Container>
+`;
