@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
 
 const AboutExpanse = () => (
@@ -8,8 +9,20 @@ const AboutExpanse = () => (
         <Container>
             <Alert variant="success">
                 <Row className="px-2">
-                    <h5>About Expanse Manager</h5>
-                    <p>Visual Studio Code and WebStorm support debugging out of the box with Create React App. This enables you as a developer to write and debug your React code without leaving the editor, and most importantly it enables you to have a continuous development workflow, where context switching is minimal, as you don’t have to switch between tools.</p>
+                    <Col>
+                        <h5>About Expansify</h5>
+                        <h6><code>It's a prototype. It is only for testing purpose.</code> <kbd>conditions applied!</kbd></h6>
+                        <p>Expansify is a react web app which manages users expanses and keeps them with you for lifetime</p>
+                        <h5>What can you do through it?</h5>
+                        <ol>
+                            <li>You can add your expanse.</li>
+                            <li>You can edit your expanse.</li>
+                            <li>You can delete your expanse.</li>
+                            <li>You can get summary of your expanses.</li>
+                            <li>You can sort your expanses.</li>
+                            <li>You can search your expanses.</li>
+                        </ol>
+                    </Col>
                 </Row>
             </Alert>
         </Container>

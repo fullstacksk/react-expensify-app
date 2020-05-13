@@ -14,12 +14,14 @@ import expanses from '../fixtures/expanses'
 import database from '../../firebase/firebase'
 
 const createMockStore = configureMockStore([thunk])
+const uid = "thisismutestuid"
+const defaultAuthState = { auth: { uid } }
 beforeEach((done) => {
     const expanseData = {}
     expanses.forEach(({ id, description, note, amount, createdAt }) => {
         expanseData[id] = { description, note, amount, createdAt }
     })
-    database.ref('expanses').set(expanseData).then(() => done())
+    database.ref(`users/${uid}/expanses`).set(expanseData).then(() => done())
     jest.setTimeout(10000)
 })
 
@@ -63,7 +65,7 @@ test("Should generate addExpanse action", () => {
 })
 
 test("should fetch data from firebase", (done) => {
-    const store = createMockStore({})
+    const store = createMockStore(defaultAuthState)
     store.dispatch(startSetExpanses()).then(() => {
         const actions = store.getActions()
         expect(actions[0]).toEqual({
@@ -75,7 +77,7 @@ test("should fetch data from firebase", (done) => {
 })
 
 test("should add expanse to database and to store", (done) => {
-    const store = createMockStore({})
+    const store = createMockStore(defaultAuthState)
     const expanseData = {
         description: "Internet Bill",
         note: "i  have paid",
@@ -96,7 +98,7 @@ test("should add expanse to database and to store", (done) => {
 })
 
 test("should add expanse with defaults to database and to store", (done) => {
-    const store = createMockStore({})
+    const store = createMockStore(defaultAuthState)
     store.dispatch(startAddExpanse())
         .then(() => {
             const actions = store.getActions()
@@ -114,7 +116,7 @@ test("should add expanse with defaults to database and to store", (done) => {
         })
 })
 test("should delete data from firebase", (done) => {
-    const store = createMockStore({})
+    const store = createMockStore(defaultAuthState)
     const id = expanses[0].id
     store.dispatch(startRemoveExpanse({ id })).then(() => {
         const actions = store.getActions()
@@ -127,7 +129,7 @@ test("should delete data from firebase", (done) => {
 })
 
 test("Should edit data from firebase", () => {
-    const store = createMockStore({})
+    const store = createMockStore(defaultAuthState)
     const id = expanses[1].id
     const updates = {
         description: "Most Expensive",

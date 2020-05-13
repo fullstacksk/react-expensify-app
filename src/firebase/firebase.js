@@ -14,7 +14,9 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, googleAuthProvider, database as default }
+const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
+
+export { firebase, googleAuthProvider, facebookAuthProvider, database as default }
 
 // const onValueChange = database.ref('expanses')
 //     .on('value', (snapshot) => {

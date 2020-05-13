@@ -9,19 +9,23 @@ import Button from 'react-bootstrap/Button';
 
 
 
-export const MyNavbar = ({ startLogout }) => (
+export const MyNavbar = ({ startLogout, isAuthenticated }) => (
     <Container className="border-bottom mb-3 " fluid>
         <Container >
             <Navbar expand="lg">
                 <NavLink to="/" className="text-primary navbar-brand"><kbd className="bg-info text-light">Expensify</kbd></NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto ">
-                        <NavLink activeClassName="is-active" className="nav-link text-info" to="/dashboard" exact={true}>Dashboard</NavLink>
-                        <NavLink activeClassName="is-active" className="nav-link text-info" to="/create">Add Expanse</NavLink>
+                    <Nav className="ml-auto">
+                        {isAuthenticated && <NavLink activeClassName="is-active" className="nav-link text-info" to="/dashboard">Dashboard</NavLink>}
+                        {isAuthenticated && <NavLink activeClassName="is-active" className="nav-link text-info" to="/create">Add Expanse</NavLink>}
                         <NavLink activeClassName="is-active" className="nav-link text-info" to="/About">About</NavLink>
-                        <NavLink activeClassName="is-active" className="nav-link text-info" to="/support">Support</NavLink>
-                        <NavLink activeClassName="is-active" className="nav-link text-info" to="/support"><Button variant="danger" className="py-0" onClick={startLogout}>Logout</Button></NavLink>
+                        <NavLink activeClassName="is-active" className="nav-link text-info" to="/developer">Developer</NavLink>
+                        {isAuthenticated ? (
+                            <NavLink activeClassName="is-active" className="nav-link text-info pr-0" to="/" ><Button variant="danger" id="logout" onClick={startLogout} className="py-0">Logout</Button></NavLink>
+                        ) : (
+                                <NavLink activeClassName="is-active" className="nav-link text-info pr-0 " to="/"><Button variant="info" className="py-0">Login</Button></NavLink>
+                            )}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -32,5 +36,8 @@ export const MyNavbar = ({ startLogout }) => (
 const mapDispatchToprops = (dispatch) => ({
     startLogout: () => dispatch(startLogout())
 });
+const mapStateToProps = (state) => ({
+    isAuthenticated: !!state.auth.uid
+})
 
-export default connect(undefined, mapDispatchToprops)(MyNavbar);
+export default connect(mapStateToProps, mapDispatchToprops)(MyNavbar);

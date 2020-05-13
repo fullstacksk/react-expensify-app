@@ -31,14 +31,13 @@ exports[`Should return MyNavbar component 1`] = `
         id="basic-navbar-nav"
       >
         <Nav
-          className="ml-auto "
+          className="ml-auto"
           fill={false}
           justify={false}
         >
           <NavLink
             activeClassName="is-active"
             className="nav-link text-info"
-            exact={true}
             to="/dashboard"
           >
             Dashboard
@@ -60,19 +59,20 @@ exports[`Should return MyNavbar component 1`] = `
           <NavLink
             activeClassName="is-active"
             className="nav-link text-info"
-            to="/support"
+            to="/developer"
           >
-            Support
+            Developer
           </NavLink>
           <NavLink
             activeClassName="is-active"
-            className="nav-link text-info"
-            to="/support"
+            className="nav-link text-info pr-0"
+            to="/"
           >
             <Button
               active={false}
               className="py-0"
               disabled={false}
+              id="logout"
               onClick={[Function]}
               type="button"
               variant="danger"

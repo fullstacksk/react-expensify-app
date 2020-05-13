@@ -40,6 +40,7 @@ ReactDOM.render(loader, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
+        console.log(user.providerData);
         store.dispatch(login(user.uid));
         store.dispatch(startSetExpanses()).then(() => {
             renderApp();

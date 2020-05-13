@@ -9,7 +9,8 @@ export const addExpanse = (expanse) => (
     }
 );
 export const startAddExpanse = (expanseData = {}) => {
-    return (dispatch) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
         const {
             description = '',
             note = '',
@@ -17,7 +18,7 @@ export const startAddExpanse = (expanseData = {}) => {
             createdAt = 0
         } = expanseData;
         const expanse = { description, note, amount, createdAt };
-        return database.ref('expanses')
+        return database.ref(`users/${uid}/expanses`)
             .push(expanse)
             .then((ref) => {
                 dispatch(addExpanse({
@@ -39,8 +40,9 @@ export const removeExpanse = ({ id = '' } = {}) => ({
 
 //START_REMOVE_EXPANSE
 export const startRemoveExpanse = ({ id } = {}) => {
-    return (dispatch) => {
-        return database.ref(`expanses/${id}`).remove()
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/expanses/${id}`).remove()
             .then(() => {
                 dispatch(removeExpanse({ id }))
             })
@@ -59,8 +61,9 @@ export const editExpanse = (id, updates) => ({
 //START_EDIT_EXPANSE
 
 export const startEditExpanse = (id, updates) => {
-    return (dispatch) => {
-        return database.ref(`expanses/${id}`)
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/expanses/${id}`)
             .set(updates)
             .then(() => {
                 dispatch(editExpanse(id, updates))
@@ -78,8 +81,9 @@ export const setExpanses = (expanses) => ({
 })
 
 export const startSetExpanses = () => {
-    return (dispatch) => {
-        return database.ref('expanses')
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/expanses`)
             .once('value')
             .then((snapshot) => {
                 const expanses = []

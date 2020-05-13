@@ -73,7 +73,7 @@ exports[`Should render Login correctly 1`] = `
             <Button
               active={false}
               className="w-100"
-              disabled={false}
+              disabled={true}
               type="button"
               variant="info"
             >

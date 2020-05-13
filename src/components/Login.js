@@ -7,9 +7,9 @@ import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import { connect } from 'react-redux';
-import { startLogin } from '../actions/auth';
+import { startLogin, startFacebookLogin } from '../actions/auth';
 
-export const Login = ({ startLogin }) => (
+export const Login = ({ startLogin, startFacebookLogin }) => (
     <Container fluid className="h-min-100 h-max-100 bg-light">
         <Row md={4} className="justify-content-center align-items-center h-min-100 h-max-100">
             <Form>
@@ -26,13 +26,14 @@ export const Login = ({ startLogin }) => (
                     variant="primary"
                     type="button"
                     className="w-100"
+                    onClick={startFacebookLogin}
                 > Login With Facebook</Button>
                 <p className="text-center my-2 p-1"><Badge variant="info">Or</Badge></p>
 
                 <Accordion >
                     <Card>
                         <Accordion.Toggle as={Card.Header} eventKey="0" className="p-0">
-                            <Button variant="info" type="button" className="w-100"> Login Anonymously</Button>
+                            <Button variant="info" type="button" className="w-100" disabled> Login Anonymously</Button>
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
                             <Card.Body>
@@ -57,7 +58,8 @@ export const Login = ({ startLogin }) => (
 )
 
 const mapDispatchToProps = (dispatch) => ({
-    startLogin: () => dispatch(startLogin())
+    startLogin: () => dispatch(startLogin()),
+    startFacebookLogin: () => dispatch(startFacebookLogin())
 });
 
 export default connect(undefined, mapDispatchToProps)(Login);
