@@ -9,6 +9,7 @@ exports[`Should return MyNavbar component 1`] = `
     fluid={false}
   >
     <Navbar
+      className=" px-md-3 px-0"
       collapseOnSelect={false}
       expand="lg"
       variant="light"

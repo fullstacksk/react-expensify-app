@@ -2,9 +2,102 @@
 
 exports[`Should render Login correctly 1`] = `
 <Container
-  className="h-min-100 h-max-100 bg-light"
+  className="h-min-100 h-max-100 mt-n3"
   fluid={true}
+  id="particle-container"
 >
+  <div>
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+    <div
+      className="particle"
+    />
+  </div>
   <Row
     className="justify-content-center align-items-center h-min-100 h-max-100"
     md={4}

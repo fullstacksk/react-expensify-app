@@ -22,14 +22,15 @@ const Developer = () => (
                     <h5>Connect with me</h5>
                 </Row>
                 <Row>
-                    <Col md={4}>
-                        <a className="btn btn-primary" href="https://www.facebook.com/profile.php?id=100008404923891">Facebook</a>
+                    <Col md={4} className="mb-2">
+                        <a className="btn btn-primary w-100" href="https://www.facebook.com/profile.php?id=100008404923891">Facebook</a>
+
                     </Col>
-                    <Col md={4}>
-                        <a className="btn btn-warning" href="https://www.instagram.com/sk_sahil_official/" >Instagram</a>
+                    <Col md={4} className="mb-2">
+                        <a className="btn btn-warning w-100" href="https://www.instagram.com/sk_sahil_official/" >Instagram</a>
                     </Col>
-                    <Col md={4}>
-                        <a className="btn btn-secondary" href="https://github.com/fullstacksk/react-expensify-app">Github</a>
+                    <Col md={4} className="mb-2">
+                        <a className="btn btn-secondary w-100" href="https://github.com/fullstacksk/react-expensify-app">Github</a>
                     </Col>
                 </Row>
             </Alert>

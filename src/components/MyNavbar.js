@@ -12,7 +12,7 @@ import Button from 'react-bootstrap/Button';
 export const MyNavbar = ({ startLogout, isAuthenticated }) => (
     <Container className="border-bottom mb-3 " fluid>
         <Container >
-            <Navbar expand="lg">
+            <Navbar expand="lg" className=" px-md-3 px-0">
                 <NavLink to="/" className="text-primary navbar-brand"><kbd className="bg-info text-light">Expensify</kbd></NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

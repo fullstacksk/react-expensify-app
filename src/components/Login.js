@@ -10,7 +10,41 @@ import { connect } from 'react-redux';
 import { startLogin, startFacebookLogin } from '../actions/auth';
 
 export const Login = ({ startLogin, startFacebookLogin }) => (
-    <Container fluid className="h-min-100 h-max-100 bg-light">
+    <Container fluid className="h-min-100 h-max-100 mt-n3" id="particle-container">
+
+        <div>
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+            <div className="particle" />
+        </div>
+
         <Row md={4} className="justify-content-center align-items-center h-min-100 h-max-100">
             <Form>
                 <Button
